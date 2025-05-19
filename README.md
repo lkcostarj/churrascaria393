@@ -1,52 +1,33 @@
-# Rota 393 Churrascaria - Sistema de Pedidos
 
-Este é um sistema de pedidos interativo para a Rota 393 Churrascaria, desenvolvido como uma aplicação web estática que permite aos clientes montarem seus pedidos de refeição com churrasco através de uma interface intuitiva no formato de quiz.
 
-## Funcionalidades
+<!--
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
+  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
+-->
 
-- Interface interativa no estilo quiz para seleção de itens
-- Barra de progresso para acompanhamento das etapas
-- Efeitos visuais e animações (partículas, confetes, transições)
-- Formulário de endereço para entrega
-- Opções de pagamento (cartão, dinheiro com troco, PIX)
-- Integração com WhatsApp para envio do pedido
-- Design responsivo para desktop e dispositivos móveis
+## Step 2: Configure your site
 
-## Estrutura do Projeto
+_You turned on GitHub Pages! :tada:_
 
-- `index.html` - Estrutura principal da página
-- `style.css` - Estilos e animações
-- `script.js` - Lógica de interação e funcionalidades
-- `logo_web.png` - Logo da Rota 393 Churrascaria
-- `favicon.png` - Ícone para a aba do navegador
+We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
 
-## Como Usar
+Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
 
-1. Clone este repositório
-2. Abra o arquivo `index.html` em um navegador web
-3. Alternativamente, hospede os arquivos em qualquer servidor web estático
+We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
 
-## Personalização
+### :keyboard: Activity: Configure your site
 
-Para personalizar este sistema para outro estabelecimento:
+1. Browse to the `_config.yml` file in the `my-pages` branch.
+1. In the upper right corner, open the file editor.
+1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
+   ```yml
+   theme: minima
+   ```
+1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
+1. Commit your changes.
+1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
+1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
-1. Substitua as imagens de logo
-2. Edite as categorias e itens no arquivo HTML
-3. Atualize o número de WhatsApp no arquivo `script.js` (variável `whatsappNumber`)
-4. Personalize as cores no arquivo CSS (variáveis no `:root`)
 
-## Requisitos Técnicos
-
-- Navegador web moderno com suporte a JavaScript ES6+
-- Conexão com internet para carregar bibliotecas externas (Font Awesome, Particles.js, Canvas Confetti)
-
-## Bibliotecas Utilizadas
-
-- [Particles.js](https://vincentgarreau.com/particles.js/) - Efeitos de partículas
-- [Canvas Confetti](https://www.kirilv.com/canvas-confetti/) - Efeitos de confete
-- [Font Awesome](https://fontawesome.com/) - Ícones
-- [Animate.css](https://animate.style/) - Animações CSS
-
-## Licença
-
-Este projeto é proprietário e destinado apenas para uso da Rota 393 Churrascaria.
