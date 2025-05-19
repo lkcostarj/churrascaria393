@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota 393 Churrascaria - Faça seu Pedido</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Container de partículas para o fundo -->
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-container animate__animated animate__fadeIn">
+            <img src="logo_web.png" alt="Rota 393 Churrascaria" class="logo">
+        </div>
+        
+        <!-- Barra de Progresso -->
+        <div class="progress-container animate__animated animate__fadeIn">
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <div class="step-text">Arroz</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <div class="step-text">Farofa/Feijão</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <div class="step-text">Fritas</div>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <div class="step-text">Salada</div>
+                </div>
+                <div class="progress-step" data-step="5">
+                    <div class="step-circle">5</div>
+                    <div class="step-text">Pastel</div>
+                </div>
+                <div class="progress-step" data-step="6">
+                    <div class="step-circle">6</div>
+                    <div class="step-text">Resumo</div>
+                </div>
+                <div class="progress-step" data-step="7">
+                    <div class="step-circle">7</div>
+                    <div class="step-text">Entrega</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cabeçalho -->
+        <header class="animate__animated animate__fadeIn">
+            <div class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <h1>Refeição com Churrasco</h1>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main>
+            <!-- Etapa 1: Arroz -->
+            <section class="step-content active animate__animated animate__fadeIn" id="step1">
+                <div class="step-header">
+                    <h2>Escolha seu arroz</h2>
+                    <p class="limit">(Escolha até 1)</p>
+                    <div class="total-price">
+                        <span>Total</span>
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Arroz tradicional</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="next-btn">Próximo</button>
+                </div>
+            </section>
+
+            <!-- Etapa 2: Farofa e Feijão -->
+            <section class="step-content" id="step2">
+                <div class="step-header">
+                    <h2>Farofa e Feijão</h2>
+                    <p class="limit">(Escolha até 2)</p>
+                    <div class="total-price">
+                        <span>Total</span>
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Farofa</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Feijão</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="prev-btn">Anterior</button>
+                    <button class="next-btn">Próximo</button>
+                </div>
+            </section>
+
+            <!-- Etapa 3: Fritas -->
+            <section class="step-content" id="step3">
+                <div class="step-header">
+                    <h2>Fritas?</h2>
+                    <p class="limit">(Escolha até 1)</p>
+                    <div class="total-price">
+                        <span>Total</span>
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Batata frita</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Cebola à milanesa</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Aipim</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="prev-btn">Anterior</button>
+                    <button class="next-btn">Próximo</button>
+                </div>
+            </section>
+
+            <!-- Etapa 4: Salada -->
+            <section class="step-content" id="step4">
+                <div class="step-header">
+                    <h2>Salada?</h2>
+                    <p class="limit">(Escolha até 1)</p>
+                    <div class="total-price">
+                        <span>Total</span>
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Alface e tomate</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Vinagrete c/ pimentão</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="prev-btn">Anterior</button>
+                    <button class="next-btn">Próximo</button>
+                </div>
+            </section>
+
+            <!-- Etapa 5: Pastel -->
+            <section class="step-content" id="step5">
+                <div class="step-header">
+                    <h2>Pastel?</h2>
+                    <p class="limit">(Escolha até 1)</p>
+                    <div class="total-price">
+                        <span>Total</span>
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Pastel carne</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="option-item">
+                        <div class="option-info">
+                            <h3>Pastel queijo</h3>
+                            <p class="price">R$ 0,00</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="decrement-btn">-</button>
+                            <span class="quantity">0</span>
+                            <button class="increment-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="prev-btn">Anterior</button>
+                    <button class="next-btn">Próximo</button>
+                </div>
+            </section>
+
+            <!-- Etapa 6: Resumo do Pedido -->
+            <section class="step-content" id="step6">
+                <div class="step-header">
+                    <h2>Refeição com Churrasco</h2>
+                    <p>Churrasco misto (carne, frango, linguiça)</p>
+                    <div class="total-price">
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                </div>
+
+                <div class="summary-container">
+                    <h3>Suas escolhas:</h3>
+                    <div id="selected-items" class="selected-items">
+                        <!-- Itens selecionados serão inseridos aqui via JavaScript -->
+                    </div>
+
+                    <div class="observation-field">
+                        <label for="observation">Alguma observação para este item?</label>
+                        <textarea id="observation" placeholder="Ex: Sem cebola, bem passado, etc."></textarea>
+                    </div>
+
+                    <div class="favorite-button">
+                        <button id="add-favorite">
+                            <i class="far fa-heart"></i> Adicionar aos Favoritos
+                        </button>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="prev-btn">Anterior</button>
+                    <button class="next-btn">Finalizar Pedido</button>
+                </div>
+            </section>
+
+            <!-- Etapa 7: Endereço e Pagamento -->
+            <section class="step-content" id="step7">
+                <div class="step-header">
+                    <h2>Sacola</h2>
+                </div>
+
+                <div class="delivery-container">
+                    <h3>Entrega</h3>
+                    <div class="address-selection">
+                        <div class="address-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="address-info">
+                            <p>Escolha o endereço de entrega onde deseja receber seu pedido</p>
+                        </div>
+                        <div class="address-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="pickup-option">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="pickup-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span>Retirar pedido no estabelecimento</span>
+                    </div>
+                </div>
+
+                <div class="address-form" id="address-form">
+                    <h3>Dados de Entrega</h3>
+                    <div class="form-group">
+                        <label for="street">Rua</label>
+                        <input type="text" id="street" placeholder="Ex: Av. Brasil">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="number">Número</label>
+                            <input type="text" id="number" placeholder="Ex: 123">
+                        </div>
+                        <div class="form-group">
+                            <label for="complement">Complemento</label>
+                            <input type="text" id="complement" placeholder="Ex: Apto 101">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" id="neighborhood" placeholder="Ex: Centro">
+                    </div>
+                    <div class="form-group">
+                        <label for="reference">Ponto de referência</label>
+                        <input type="text" id="reference" placeholder="Ex: Próximo ao mercado">
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Refeição com Churrasco</h3>
+                    <div id="order-items" class="order-items">
+                        <!-- Itens do pedido serão inseridos aqui via JavaScript -->
+                    </div>
+                    <div class="quantity-control order-quantity">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="payment-options">
+                    <h3>Forma de Pagamento</h3>
+                    <div class="payment-method">
+                        <label>
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>Cartão</span>
+                        </label>
+                    </div>
+                    <div class="payment-method">
+                        <label>
+                            <input type="radio" name="payment" value="money">
+                            <span>Dinheiro</span>
+                        </label>
+                    </div>
+                    <!-- Campo de troco (aparece apenas quando Dinheiro é selecionado) -->
+                    <div class="change-field" id="change-field">
+                        <label for="change-amount">Precisa de troco para quanto?</label>
+                        <input type="text" id="change-amount" placeholder="Ex: R$ 50,00">
+                    </div>
+                    <div class="payment-method">
+                        <label>
+                            <input type="radio" name="payment" value="pix">
+                            <span>PIX</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="price-summary">
+                    <h3>Resumo</h3>
+                    <div class="price-row">
+                        <span>Total dos produtos</span>
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Taxa de entrega</span>
+                        <span class="price">R$ 0,00</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Subtotal do pedido</span>
+                        <span class="price">R$ 24,90</span>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="prev-btn">Anterior</button>
+                    <button class="finish-btn" id="send-whatsapp">Finalizar e Enviar para WhatsApp</button>
+                </div>
+            </section>
+
+            <!-- Confirmação do Pedido -->
+            <section class="step-content" id="confirmation">
+                <div class="confirmation-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Pedido Realizado com Sucesso!</h2>
+                    <p>Seu pedido foi enviado para o WhatsApp da Rota 393 Churrascaria.</p>
+                    <p>Número do pedido: <strong>#12345</strong></p>
+                    <p>Tempo estimado de entrega: <strong>30-45 minutos</strong></p>
+                    <button class="home-btn">Voltar ao Início</button>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Container para efeitos de confete -->
+        <div id="confetti-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

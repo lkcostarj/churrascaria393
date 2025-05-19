@@ -1,54 +1,52 @@
-<header>
+# Rota 393 Churrascaria - Sistema de Pedidos
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+Este é um sistema de pedidos interativo para a Rota 393 Churrascaria, desenvolvido como uma aplicação web estática que permite aos clientes montarem seus pedidos de refeição com churrasco através de uma interface intuitiva no formato de quiz.
 
-# GitHub Pages
+## Funcionalidades
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+- Interface interativa no estilo quiz para seleção de itens
+- Barra de progresso para acompanhamento das etapas
+- Efeitos visuais e animações (partículas, confetes, transições)
+- Formulário de endereço para entrega
+- Opções de pagamento (cartão, dinheiro com troco, PIX)
+- Integração com WhatsApp para envio do pedido
+- Design responsivo para desktop e dispositivos móveis
 
-</header>
+## Estrutura do Projeto
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+- `index.html` - Estrutura principal da página
+- `style.css` - Estilos e animações
+- `script.js` - Lógica de interação e funcionalidades
+- `logo_web.png` - Logo da Rota 393 Churrascaria
+- `favicon.png` - Ícone para a aba do navegador
 
-## Step 1: Enable GitHub Pages
+## Como Usar
 
-_Welcome to GitHub Pages and Jekyll :tada:!_
+1. Clone este repositório
+2. Abra o arquivo `index.html` em um navegador web
+3. Alternativamente, hospede os arquivos em qualquer servidor web estático
 
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
+## Personalização
 
-### :keyboard: Activity: Enable GitHub Pages
+Para personalizar este sistema para outro estabelecimento:
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
+1. Substitua as imagens de logo
+2. Edite as categorias e itens no arquivo HTML
+3. Atualize o número de WhatsApp no arquivo `script.js` (variável `whatsappNumber`)
+4. Personalize as cores no arquivo CSS (variáveis no `:root`)
 
-<footer>
+## Requisitos Técnicos
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+- Navegador web moderno com suporte a JavaScript ES6+
+- Conexão com internet para carregar bibliotecas externas (Font Awesome, Particles.js, Canvas Confetti)
 
----
+## Bibliotecas Utilizadas
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+- [Particles.js](https://vincentgarreau.com/particles.js/) - Efeitos de partículas
+- [Canvas Confetti](https://www.kirilv.com/canvas-confetti/) - Efeitos de confete
+- [Font Awesome](https://fontawesome.com/) - Ícones
+- [Animate.css](https://animate.style/) - Animações CSS
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+## Licença
 
-</footer>
+Este projeto é proprietário e destinado apenas para uso da Rota 393 Churrascaria.
