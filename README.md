@@ -1,33 +1,83 @@
+# Painel Administrativo - Rota 393 Churrascaria
 
+Este é o painel administrativo para gerenciamento do sistema de delivery da Rota 393 Churrascaria, permitindo personalizar diversos aspectos do site sem necessidade de conhecimentos técnicos.
 
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
--->
+## Características
 
-## Step 2: Configure your site
+- Sistema de login seguro
+- Upload de imagens e GIFs para o fundo do site
+- Troca da logo do estabelecimento (suporta formato GIF)
+- Personalização da mensagem enviada ao WhatsApp
+- Configuração de múltiplos números para diferentes tipos de pedidos
+- Interface intuitiva e responsiva
 
-_You turned on GitHub Pages! :tada:_
+## Estrutura de Arquivos
 
-We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
+- `index.html` - Página de login e interface do painel
+- `admin_style.css` - Estilos do painel administrativo
+- `admin_script.js` - Lógica de funcionamento do painel
 
-Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
+## Como Usar
 
-We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
+1. Acesse o painel através da URL fornecida
+2. Faça login com as credenciais:
+   - Usuário: `admin`
+   - Senha: `admin123`
+3. Navegue pelas diferentes seções do painel:
+   - **Dashboard**: Visão geral e acesso rápido às funcionalidades
+   - **Aparência**: Upload de imagens de fundo e logo
+   - **Mensagens**: Personalização do template de mensagem para WhatsApp
+   - **WhatsApp**: Gerenciamento de números para recebimento de pedidos
+   - **Configurações**: Alteração de senha e informações do estabelecimento
 
-### :keyboard: Activity: Configure your site
+## Funcionalidades Detalhadas
 
-1. Browse to the `_config.yml` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
-   ```yml
-   theme: minima
-   ```
-1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
-1. Commit your changes.
-1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+### Aparência
+- Upload de imagens/GIFs para o fundo do site
+- Troca da logo do estabelecimento
+- Visualização prévia das alterações
 
+### Mensagens
+- Edição do template de mensagem enviada ao WhatsApp
+- Suporte a variáveis dinâmicas como {items}, {total}, {address}, etc.
+- Visualização prévia da mensagem formatada
 
+### WhatsApp
+- Adição de múltiplos números para recebimento de pedidos
+- Definição de número padrão
+- Categorização por tipo de pedido (todos, apenas delivery, apenas retirada)
+
+### Configurações
+- Alteração de senha de acesso
+- Configuração de informações do estabelecimento
+
+## Integração com o Site de Delivery
+
+As configurações feitas no painel são salvas no localStorage do navegador e automaticamente carregadas pelo site de delivery através do script de integração.
+
+## Personalização para Outros Estabelecimentos
+
+Para adaptar o sistema para outro estabelecimento:
+
+1. Acesse o painel administrativo
+2. Altere a logo, imagem de fundo, mensagem e números de WhatsApp
+3. Atualize as informações do estabelecimento nas configurações
+4. As alterações serão refletidas automaticamente no site de delivery
+
+## Requisitos Técnicos
+
+- Navegador moderno com suporte a JavaScript ES6+
+- Suporte a localStorage para salvar configurações
+- Conexão com internet para carregar bibliotecas externas (Font Awesome)
+
+## Segurança
+
+- Em ambiente de produção, recomenda-se implementar autenticação baseada em servidor
+- As credenciais atuais são apenas para demonstração
+- Os dados são armazenados localmente no navegador do usuário
+
+## Licença
+
+Este projeto é proprietário e seu uso, modificação ou distribuição sem autorização é proibido.
+
+© 2025 Rota 393 Churrascaria - Todos os direitos reservados.

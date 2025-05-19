@@ -3,450 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rota 393 Churrascaria - Faça seu Pedido</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Painel Administrativo - Rota 393 Churrascaria</title>
+    <link rel="stylesheet" href="admin_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-    <!-- Container de partículas para o fundo -->
-    <div id="particles-js"></div>
-    
-    <div class="container">
-        <!-- Logo -->
-        <div class="logo-container animate__animated animate__fadeIn">
-            <img src="logo_web.png" alt="Rota 393 Churrascaria" class="logo">
-        </div>
-        
-        <!-- Barra de Progresso -->
-        <div class="progress-container animate__animated animate__fadeIn">
-            <div class="progress-bar">
-                <div class="progress-step active" data-step="1">
-                    <div class="step-circle">1</div>
-                    <div class="step-text">Arroz</div>
-                </div>
-                <div class="progress-step" data-step="2">
-                    <div class="step-circle">2</div>
-                    <div class="step-text">Farofa/Feijão</div>
-                </div>
-                <div class="progress-step" data-step="3">
-                    <div class="step-circle">3</div>
-                    <div class="step-text">Fritas</div>
-                </div>
-                <div class="progress-step" data-step="4">
-                    <div class="step-circle">4</div>
-                    <div class="step-text">Salada</div>
-                </div>
-                <div class="progress-step" data-step="5">
-                    <div class="step-circle">5</div>
-                    <div class="step-text">Pastel</div>
-                </div>
-                <div class="progress-step" data-step="6">
-                    <div class="step-circle">6</div>
-                    <div class="step-text">Resumo</div>
-                </div>
-                <div class="progress-step" data-step="7">
-                    <div class="step-circle">7</div>
-                    <div class="step-text">Entrega</div>
-                </div>
+    <div class="login-container" id="login-container">
+        <div class="login-box">
+            <div class="logo-container">
+                <img src="logo_web.png" alt="Rota 393 Churrascaria" class="logo">
             </div>
+            <h2>Painel Administrativo</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <div class="error-message" id="login-error"></div>
+        </div>
+    </div>
+
+    <div class="admin-container" id="admin-container" style="display: none;">
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="logo_web.png" alt="Rota 393 Churrascaria" class="logo">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active" data-target="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                <li class="nav-item" data-target="appearance"><i class="fas fa-palette"></i> Aparência</li>
+                <li class="nav-item" data-target="messages"><i class="fas fa-comment-alt"></i> Mensagens</li>
+                <li class="nav-item" data-target="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                <li class="nav-item" data-target="settings"><i class="fas fa-cog"></i> Configurações</li>
+                <li class="nav-item logout"><i class="fas fa-sign-out-alt"></i> Sair</li>
+            </ul>
         </div>
 
-        <!-- Cabeçalho -->
-        <header class="animate__animated animate__fadeIn">
-            <div class="back-button">
-                <i class="fas fa-arrow-left"></i>
+        <div class="main-content">
+            <div class="header">
+                <div class="toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <h1>Painel Administrativo</h1>
+                <div class="user-info">
+                    <span>Administrador</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
             </div>
-            <h1>Refeição com Churrasco</h1>
-        </header>
 
-        <!-- Conteúdo Principal -->
-        <main>
-            <!-- Etapa 1: Arroz -->
-            <section class="step-content active animate__animated animate__fadeIn" id="step1">
-                <div class="step-header">
-                    <h2>Escolha seu arroz</h2>
-                    <p class="limit">(Escolha até 1)</p>
-                    <div class="total-price">
-                        <span>Total</span>
-                        <span class="price">R$ 24,90</span>
-                    </div>
+            <div class="content-section active" id="dashboard-section">
+                <div class="section-header">
+                    <h2>Dashboard</h2>
+                    <p>Bem-vindo ao painel administrativo da Rota 393 Churrascaria</p>
                 </div>
-
-                <div class="options-container">
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Arroz tradicional</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
+                <div class="dashboard-cards">
+                    <div class="card" onclick="document.querySelector('[data-target=appearance]').click()">
+                        <div class="card-icon"><i class="fas fa-palette"></i></div>
+                        <div class="card-content">
+                            <h3>Aparência</h3>
+                            <p>Personalize o fundo e a logo do seu site</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="navigation-buttons">
-                    <button class="next-btn">Próximo</button>
-                </div>
-            </section>
-
-            <!-- Etapa 2: Farofa e Feijão -->
-            <section class="step-content" id="step2">
-                <div class="step-header">
-                    <h2>Farofa e Feijão</h2>
-                    <p class="limit">(Escolha até 2)</p>
-                    <div class="total-price">
-                        <span>Total</span>
-                        <span class="price">R$ 24,90</span>
-                    </div>
-                </div>
-
-                <div class="options-container">
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Farofa</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
+                    <div class="card" onclick="document.querySelector('[data-target=messages]').click()">
+                        <div class="card-icon"><i class="fas fa-comment-alt"></i></div>
+                        <div class="card-content">
+                            <h3>Mensagens</h3>
+                            <p>Configure as mensagens enviadas aos clientes</p>
                         </div>
                     </div>
-
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Feijão</h3>
-                            <p class="price">R$ 0,00</p>
+                    <div class="card" onclick="document.querySelector('[data-target=whatsapp]').click()">
+                        <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="card-content">
+                            <h3>WhatsApp</h3>
+                            <p>Gerencie os números para recebimento de pedidos</p>
                         </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=settings]').click()">
+                        <div class="card-icon"><i class="fas fa-cog"></i></div>
+                        <div class="card-content">
+                            <h3>Configurações</h3>
+                            <p>Altere suas configurações de conta</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="navigation-buttons">
-                    <button class="prev-btn">Anterior</button>
-                    <button class="next-btn">Próximo</button>
-                </div>
-            </section>
-
-            <!-- Etapa 3: Fritas -->
-            <section class="step-content" id="step3">
-                <div class="step-header">
-                    <h2>Fritas?</h2>
-                    <p class="limit">(Escolha até 1)</p>
-                    <div class="total-price">
-                        <span>Total</span>
-                        <span class="price">R$ 24,90</span>
-                    </div>
-                </div>
-
-                <div class="options-container">
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Batata frita</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                    </div>
-
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Cebola à milanesa</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                    </div>
-
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Aipim</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navigation-buttons">
-                    <button class="prev-btn">Anterior</button>
-                    <button class="next-btn">Próximo</button>
-                </div>
-            </section>
-
-            <!-- Etapa 4: Salada -->
-            <section class="step-content" id="step4">
-                <div class="step-header">
-                    <h2>Salada?</h2>
-                    <p class="limit">(Escolha até 1)</p>
-                    <div class="total-price">
-                        <span>Total</span>
-                        <span class="price">R$ 24,90</span>
-                    </div>
-                </div>
-
-                <div class="options-container">
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Alface e tomate</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                    </div>
-
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Vinagrete c/ pimentão</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navigation-buttons">
-                    <button class="prev-btn">Anterior</button>
-                    <button class="next-btn">Próximo</button>
-                </div>
-            </section>
-
-            <!-- Etapa 5: Pastel -->
-            <section class="step-content" id="step5">
-                <div class="step-header">
-                    <h2>Pastel?</h2>
-                    <p class="limit">(Escolha até 1)</p>
-                    <div class="total-price">
-                        <span>Total</span>
-                        <span class="price">R$ 24,90</span>
-                    </div>
-                </div>
-
-                <div class="options-container">
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Pastel carne</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                    </div>
-
-                    <div class="option-item">
-                        <div class="option-info">
-                            <h3>Pastel queijo</h3>
-                            <p class="price">R$ 0,00</p>
-                        </div>
-                        <div class="quantity-control">
-                            <button class="decrement-btn">-</button>
-                            <span class="quantity">0</span>
-                            <button class="increment-btn">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navigation-buttons">
-                    <button class="prev-btn">Anterior</button>
-                    <button class="next-btn">Próximo</button>
-                </div>
-            </section>
-
-            <!-- Etapa 6: Resumo do Pedido -->
-            <section class="step-content" id="step6">
-                <div class="step-header">
-                    <h2>Refeição com Churrasco</h2>
-                    <p>Churrasco misto (carne, frango, linguiça)</p>
-                    <div class="total-price">
-                        <span class="price">R$ 24,90</span>
-                    </div>
-                </div>
-
-                <div class="summary-container">
-                    <h3>Suas escolhas:</h3>
-                    <div id="selected-items" class="selected-items">
-                        <!-- Itens selecionados serão inseridos aqui via JavaScript -->
-                    </div>
-
-                    <div class="observation-field">
-                        <label for="observation">Alguma observação para este item?</label>
-                        <textarea id="observation" placeholder="Ex: Sem cebola, bem passado, etc."></textarea>
-                    </div>
-
-                    <div class="favorite-button">
-                        <button id="add-favorite">
-                            <i class="far fa-heart"></i> Adicionar aos Favoritos
+                <div class="quick-actions">
+                    <h3>Ações Rápidas</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="document.querySelector('[data-target=appearance]').click()">
+                            <i class="fas fa-image"></i> Trocar Fundo
+                        </button>
+                        <button class="btn btn-primary" onclick="document.querySelector('[data-target=appearance]').click()">
+                            <i class="fas fa-image"></i> Trocar Logo
+                        </button>
+                        <button class="btn btn-primary" onclick="document.querySelector('[data-target=whatsapp]').click()">
+                            <i class="fab fa-whatsapp"></i> Configurar WhatsApp
                         </button>
                     </div>
                 </div>
+            </div>
 
-                <div class="navigation-buttons">
-                    <button class="prev-btn">Anterior</button>
-                    <button class="next-btn">Finalizar Pedido</button>
+            <div class="content-section" id="appearance-section">
+                <div class="section-header">
+                    <h2>Aparência</h2>
+                    <p>Personalize o visual do seu site</p>
                 </div>
-            </section>
-
-            <!-- Etapa 7: Endereço e Pagamento -->
-            <section class="step-content" id="step7">
-                <div class="step-header">
-                    <h2>Sacola</h2>
-                </div>
-
-                <div class="delivery-container">
-                    <h3>Entrega</h3>
-                    <div class="address-selection">
-                        <div class="address-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="address-info">
-                            <p>Escolha o endereço de entrega onde deseja receber seu pedido</p>
-                        </div>
-                        <div class="address-arrow">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
-                    </div>
-
-                    <div class="pickup-option">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="pickup-toggle">
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span>Retirar pedido no estabelecimento</span>
-                    </div>
-                </div>
-
-                <div class="address-form" id="address-form">
-                    <h3>Dados de Entrega</h3>
-                    <div class="form-group">
-                        <label for="street">Rua</label>
-                        <input type="text" id="street" placeholder="Ex: Av. Brasil">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="number">Número</label>
-                            <input type="text" id="number" placeholder="Ex: 123">
-                        </div>
-                        <div class="form-group">
-                            <label for="complement">Complemento</label>
-                            <input type="text" id="complement" placeholder="Ex: Apto 101">
+                <div class="section-content">
+                    <div class="card">
+                        <h3>Imagem de Fundo</h3>
+                        <div class="upload-container">
+                            <div class="preview-container">
+                                <img id="background-preview" src="#" alt="Prévia do fundo" style="display: none;">
+                                <div class="placeholder" id="background-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Nenhuma imagem selecionada</p>
+                                </div>
+                            </div>
+                            <div class="upload-controls">
+                                <label for="background-upload" class="btn btn-primary">
+                                    <i class="fas fa-upload"></i> Selecionar Imagem
+                                </label>
+                                <input type="file" id="background-upload" accept="image/*,.gif" style="display: none;">
+                                <button class="btn btn-success" id="save-background" disabled>
+                                    <i class="fas fa-save"></i> Salvar Alterações
+                                </button>
+                                <button class="btn btn-danger" id="remove-background" disabled>
+                                    <i class="fas fa-trash"></i> Remover
+                                </button>
+                            </div>
+                            <div class="upload-info">
+                                <p>Formatos suportados: JPG, PNG, GIF</p>
+                                <p>Tamanho máximo: 5MB</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="neighborhood">Bairro</label>
-                        <input type="text" id="neighborhood" placeholder="Ex: Centro">
-                    </div>
-                    <div class="form-group">
-                        <label for="reference">Ponto de referência</label>
-                        <input type="text" id="reference" placeholder="Ex: Próximo ao mercado">
-                    </div>
-                </div>
 
-                <div class="order-summary">
-                    <h3>Refeição com Churrasco</h3>
-                    <div id="order-items" class="order-items">
-                        <!-- Itens do pedido serão inseridos aqui via JavaScript -->
-                    </div>
-                    <div class="quantity-control order-quantity">
-                        <button class="decrement-btn">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increment-btn">+</button>
+                    <div class="card">
+                        <h3>Logo</h3>
+                        <div class="upload-container">
+                            <div class="preview-container">
+                                <img id="logo-preview" src="logo_web.png" alt="Prévia da logo">
+                            </div>
+                            <div class="upload-controls">
+                                <label for="logo-upload" class="btn btn-primary">
+                                    <i class="fas fa-upload"></i> Selecionar Logo
+                                </label>
+                                <input type="file" id="logo-upload" accept="image/*,.gif" style="display: none;">
+                                <button class="btn btn-success" id="save-logo" disabled>
+                                    <i class="fas fa-save"></i> Salvar Alterações
+                                </button>
+                                <button class="btn btn-danger" id="remove-logo" disabled>
+                                    <i class="fas fa-trash"></i> Restaurar Padrão
+                                </button>
+                            </div>
+                            <div class="upload-info">
+                                <p>Formatos suportados: JPG, PNG, GIF</p>
+                                <p>Tamanho máximo: 2MB</p>
+                                <p>Dimensões recomendadas: 180x180px</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="payment-options">
-                    <h3>Forma de Pagamento</h3>
-                    <div class="payment-method">
-                        <label>
-                            <input type="radio" name="payment" value="card" checked>
-                            <span>Cartão</span>
-                        </label>
-                    </div>
-                    <div class="payment-method">
-                        <label>
-                            <input type="radio" name="payment" value="money">
-                            <span>Dinheiro</span>
-                        </label>
-                    </div>
-                    <!-- Campo de troco (aparece apenas quando Dinheiro é selecionado) -->
-                    <div class="change-field" id="change-field">
-                        <label for="change-amount">Precisa de troco para quanto?</label>
-                        <input type="text" id="change-amount" placeholder="Ex: R$ 50,00">
-                    </div>
-                    <div class="payment-method">
-                        <label>
-                            <input type="radio" name="payment" value="pix">
-                            <span>PIX</span>
-                        </label>
+            <div class="content-section" id="messages-section">
+                <div class="section-header">
+                    <h2>Mensagens</h2>
+                    <p>Configure as mensagens enviadas aos clientes</p>
+                </div>
+                <div class="section-content">
+                    <div class="card">
+                        <h3>Mensagem Padrão do WhatsApp</h3>
+                        <div class="message-editor">
+                            <div class="form-group">
+                                <label for="message-template">Template da Mensagem</label>
+                                <textarea id="message-template" rows="8" placeholder="Digite o template da mensagem..."></textarea>
+                            </div>
+                            <div class="variables-info">
+                                <h4>Variáveis Disponíveis:</h4>
+                                <ul>
+                                    <li><code>{items}</code> - Lista de itens do pedido</li>
+                                    <li><code>{total}</code> - Valor total do pedido</li>
+                                    <li><code>{address}</code> - Endereço de entrega</li>
+                                    <li><code>{payment}</code> - Método de pagamento</li>
+                                    <li><code>{change}</code> - Troco (se aplicável)</li>
+                                    <li><code>{observation}</code> - Observações do cliente</li>
+                                </ul>
+                            </div>
+                            <div class="message-preview">
+                                <h4>Prévia:</h4>
+                                <div class="preview-box" id="message-preview">
+                                    <p>A prévia da mensagem aparecerá aqui...</p>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn btn-primary" id="preview-message">
+                                    <i class="fas fa-eye"></i> Visualizar
+                                </button>
+                                <button class="btn btn-success" id="save-message">
+                                    <i class="fas fa-save"></i> Salvar Alterações
+                                </button>
+                                <button class="btn btn-danger" id="reset-message">
+                                    <i class="fas fa-undo"></i> Restaurar Padrão
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="price-summary">
-                    <h3>Resumo</h3>
-                    <div class="price-row">
-                        <span>Total dos produtos</span>
-                        <span class="price">R$ 24,90</span>
-                    </div>
-                    <div class="price-row">
-                        <span>Taxa de entrega</span>
-                        <span class="price">R$ 0,00</span>
-                    </div>
-                    <div class="price-row total">
-                        <span>Subtotal do pedido</span>
-                        <span class="price">R$ 24,90</span>
+            <div class="content-section" id="whatsapp-section">
+                <div class="section-header">
+                    <h2>WhatsApp</h2>
+                    <p>Gerencie os números para recebimento de pedidos</p>
+                </div>
+                <div class="section-content">
+                    <div class="card">
+                        <h3>Números de WhatsApp</h3>
+                        <div class="whatsapp-numbers">
+                            <div class="whatsapp-list" id="whatsapp-list">
+                                <!-- Números serão adicionados dinamicamente aqui -->
+                            </div>
+                            <div class="add-number-form">
+                                <h4>Adicionar Novo Número</h4>
+                                <div class="form-group">
+                                    <label for="number-input">Número (apenas dígitos)</label>
+                                    <input type="text" id="number-input" placeholder="Ex: 24998665908">
+                                </div>
+                                <div class="form-group">
+                                    <label for="number-name">Nome/Descrição</label>
+                                    <input type="text" id="number-name" placeholder="Ex: Pedidos de Churrasco">
+                                </div>
+                                <div class="form-group">
+                                    <label for="number-type">Tipo de Pedido</label>
+                                    <select id="number-type">
+                                        <option value="all">Todos os pedidos</option>
+                                        <option value="delivery">Apenas Delivery</option>
+                                        <option value="pickup">Apenas Retirada</option>
+                                    </select>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="default-number">
+                                    <label for="default-number">Definir como número padrão</label>
+                                </div>
+                                <button class="btn btn-success" id="add-number">
+                                    <i class="fas fa-plus"></i> Adicionar Número
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="navigation-buttons">
-                    <button class="prev-btn">Anterior</button>
-                    <button class="finish-btn" id="send-whatsapp">Finalizar e Enviar para WhatsApp</button>
+            <div class="content-section" id="settings-section">
+                <div class="section-header">
+                    <h2>Configurações</h2>
+                    <p>Altere suas configurações de conta</p>
                 </div>
-            </section>
+                <div class="section-content">
+                    <div class="card">
+                        <h3>Alterar Senha</h3>
+                        <form id="password-form">
+                            <div class="form-group">
+                                <label for="current-password">Senha Atual</label>
+                                <input type="password" id="current-password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">Nova Senha</label>
+                                <input type="password" id="new-password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirmar Nova Senha</label>
+                                <input type="password" id="confirm-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-key"></i> Alterar Senha
+                            </button>
+                        </form>
+                    </div>
 
-            <!-- Confirmação do Pedido -->
-            <section class="step-content" id="confirmation">
-                <div class="confirmation-message">
-                    <i class="fas fa-check-circle"></i>
-                    <h2>Pedido Realizado com Sucesso!</h2>
-                    <p>Seu pedido foi enviado para o WhatsApp da Rota 393 Churrascaria.</p>
-                    <p>Número do pedido: <strong>#12345</strong></p>
-                    <p>Tempo estimado de entrega: <strong>30-45 minutos</strong></p>
-                    <button class="home-btn">Voltar ao Início</button>
+                    <div class="card">
+                        <h3>Informações do Estabelecimento</h3>
+                        <form id="establishment-form">
+                            <div class="form-group">
+                                <label for="establishment-name">Nome do Estabelecimento</label>
+                                <input type="text" id="establishment-name" value="Rota 393 Churrascaria">
+                            </div>
+                            <div class="form-group">
+                                <label for="establishment-address">Endereço</label>
+                                <input type="text" id="establishment-address" placeholder="Endereço do estabelecimento">
+                            </div>
+                            <div class="form-group">
+                                <label for="establishment-phone">Telefone</label>
+                                <input type="text" id="establishment-phone" placeholder="Telefone do estabelecimento">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Salvar Informações
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </section>
-        </main>
-        
-        <!-- Container para efeitos de confete -->
-        <div id="confetti-container"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script src="script.js"></script>
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="notification-icon"></i>
+            <span class="notification-message"></span>
+        </div>
+        <button class="notification-close">&times;</button>
+    </div>
+
+    <script src="admin_script.js"></script>
 </body>
 </html>
